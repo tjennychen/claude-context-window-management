@@ -1,0 +1,6 @@
+{"worker_id":"w1","file":"src/auth/login.ts","line":42,"text":"const API_KEY = process.env.API_KEY ?? '';"}
+{"worker_id":"w1","file":"src/auth/refresh.ts","line":18,"text":"if (!API_KEY) throw new Error('API_KEY missing');"}
+{"worker_id":"w2","file":"api/middleware/auth.go","line":67,"text":"apiKey := os.Getenv(\"API_KEY\")"}
+{"worker_id":"w3","file":"frontend/src/api.ts","line":12,"text":"headers: { 'X-API-Key': API_KEY }"}
+{"worker_id":"w3","file":"frontend/src/config.ts","line":4,"text":"export const API_KEY = import.meta.env.VITE_API_KEY;"}
+{"worker_id":"w5","file":"backend/auth/key.py","line":89,"text":"def verify_api_key(api_key: str) -> bool:"}
