@@ -19,6 +19,30 @@ Three yes/no questions. Apply this skill before kickoff if you answer yes to **t
 
 Zero or one yes → skip this skill. A flat plan with parallel `Agent(...)` calls is sufficient and the overhead isn't worth it.
 
+## The 30-second decision rule
+
+Ask yourself: "Will I want to `/clear` and resume this later?"
+
+- Yes → use the skill (state externalization buys you resumability)
+- No, but 2+ hours with parallel work → use the skill (context savings buy you headroom)
+- No, and under 2 hours → don't bother
+
+## Concrete examples
+
+**Strong fit (use the skill):**
+
+- Batch operations on N independent items where each produces state (e.g. researching N companies, scraping N profiles, filling N forms)
+- Multi-phase autonomous runs where each phase produces an artifact the next phase reads (recon → hunt → verify → report)
+- Tasks where a single tool call dumps tens of thousands of tokens that downstream steps don't actually need
+
+**Weak fit (skip the skill):**
+
+- Writing a single document (cover letter, post, design doc)
+- Fixing a single bug
+- Q&A or exploratory conversations where the conversation IS the working memory
+- Linear synthesis where every step needs the previous step's full reasoning (orchestration fights you)
+- Anything under 10 minutes
+
 ## What it adds (over Claude Code defaults)
 
 ### 1. Hard caps on subagent handoffs
