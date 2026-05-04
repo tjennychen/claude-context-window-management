@@ -1,6 +1,6 @@
 # Context Window Management
 
-Operational tweaks for long-running multi-agent Claude Code runs. Most of what you need is already built into Claude Code — parallel subagents, completion notifications, runtime compaction, file-system memory, just-in-time retrieval. This skill ships only the things that aren't:
+Operational tweaks for long-running multi-agent Claude Code runs. Most of what you need is already built into Claude Code: parallel subagents, completion notifications, runtime compaction, file-system memory, just-in-time retrieval. This skill ships only the things that aren't:
 
 - Hard caps on subagent handoffs (`summary` ≤ 2000 chars, `chain_notes` ≤ 20 × 300)
 - Marker-line protocol with the three known parser failure modes (hallucination, log injection, truncation)
@@ -18,7 +18,7 @@ Apply this skill before kickoff if at least two of these are true for your task:
 2. The orchestrator and ≥1 subagent both need the same artifact more than once.
 3. The run involves ≥3 parallel subagents whose handoffs need merging.
 
-If only one is true, skip this skill — a flat plan with `Agent(...)` calls is sufficient.
+If only one is true, skip this skill. A flat plan with `Agent(...)` calls is sufficient.
 
 ## Install
 
@@ -50,7 +50,7 @@ Architectural patterns extracted from [`vmihalis/hacker-bob`](https://github.com
 
 ## Prior art
 
-If this skill resonates, read these first — they cover the architecture this skill builds on:
+If this skill resonates, read these first. They cover the architecture this skill builds on:
 
 - [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
